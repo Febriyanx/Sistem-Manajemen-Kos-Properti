@@ -2,7 +2,7 @@
 <html lang="id">
 <head>
   <meta charset="UTF-8">
-  <title>Form Penghuni</title>
+  <title>Data Penghuni Kos</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -12,47 +12,54 @@
 </header>
 
 <div class="container">
-  <h2>Form Pendaftaran Penghuni</h2>
+  <div class="top-bar">
+    <h2>Daftar Penghuni</h2>
+    <a href="form-penghuni.html" class="btn">+ Tambah Penghuni</a>
+    <a href="index.html" class="btn"> Back</a>
+  </div>
 
-  <form>
-    <label>Nomor KTP (NIK)</label>
-    <input type="text" maxlength="16">
-
-    <label>Nama Lengkap</label>
-    <input type="text">
-
-    <label>Jenis Kelamin</label>
-    <input type="radio" name="jk" value="L"> Laki-laki
-    <input type="radio" name="jk" value="P"> Perempuan
-
-    <label>Tanggal Lahir</label>
-    <input type="date">
-
-    <label>Pekerjaan</label>
-    <input type="text">
-
-    <label>No. HP Penghuni</label>
-    <input type="text">
-
-    <label>Nama Kontak Darurat</label>
-    <input type="text">
-
-    <label>No. HP Kontak Darurat</label>
-    <input type="number">
-
-    <label>Alamat Asal</label>
-    <textarea rows="3"></textarea>
-
-    <label>Nomor Kamar</label>
-    <input type="text" placeholder="Contoh: A-101">
-
-    <label>Tanggal Mulai Sewa</label>
-    <input type="date">
-
-    <br>
-    <button type="submit" class="btn">Simpan</button>
-    <a href="index.html" class="btn btn-secondary">Batal</a>
-  </form>
+  <table>
+    <thead>
+      <tr>
+        <th>No</th>
+        <th>NIK</th>
+        <th>Nama</th>
+        <th>JK</th>
+        <th>Pekerjaan</th>
+        <th>No. HP</th>
+        <th>Kamar</th>
+        <th>Aksi</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>1</td>
+        <td>3273010101010001</td>
+        <td>Budi Santoso</td>
+        <td>L</td>
+        <td>Mahasiswa</td>
+        <td>0812-3456-7890</td>
+        <td>A-101</td>
+        <td>
+          <a href="#">Edit</a> |
+          <a href="#">Hapus</a>
+        </td>
+      </tr>
+      <tr>
+        <td>2</td>
+        <td>3273020202020002</td>
+        <td>Siti Aminah</td>
+        <td>P</td>
+        <td>Karyawan</td>
+        <td>0813-1111-2222</td>
+        <td>B-205</td>
+        <td>
+          <a href="#">Edit</a> |
+          <a href="#">Hapus</a>
+        </td>
+      </tr>
+    </tbody>
+  </table>
 </div>
 
 </body>
