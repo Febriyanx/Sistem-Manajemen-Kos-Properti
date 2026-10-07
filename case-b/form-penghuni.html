@@ -1,59 +1,97 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-  <meta charset="UTF-8">
-  <title>Form Penghuni</title>
-  <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Pendaftaran Penghuni - Case B</title>
+    <link rel="stylesheet" href="../style.css">
 </head>
 <body>
+    <div class="container">
+        <header>
+            <h1>Sistem Manajemen Kos — Modul Data Penghuni</h1>
+            <h2>Form Pendaftaran Penghuni</h2>
+        </header>
 
-<header>
-  <h1>Sistem Manajemen Kos — Modul Data Penghuni</h1>
-</header>
+        <form id="formPenghuni" class="form-card">
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="nik">Nomor KTP (NIK)</label>
+                    <input type="number" id="nik" name="nik" placeholder="16 digit NIK" maxlength="16" required>
+                </div>
+                <div class="form-group">
+                    <label for="nama">Nama Lengkap</label>
+                    <input type="text" id="nama" name="nama" placeholder="Nama sesuai KTP" required>
+                </div>
+            </div>
 
-<div class="container">
-  <h2>Form Pendaftaran Penghuni</h2>
+            <div class="form-row">
+                <div class="form-group">
+                    <label>Jenis Kelamin</label>
+                    <div class="radio-group">
+                        <label><input type="radio" name="jk" value="Laki-laki" required> Laki-laki</label>
+                        <label><input type="radio" name="jk" value="Perempuan"> Perempuan</label>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="tglLahir">Tanggal Lahir</label>
+                    <input type="date" id="tglLahir" name="tglLahir" required>
+                </div>
+            </div>
 
-  <form>
-    <label>Nomor KTP (NIK)</label>
-    <input type="text" maxlength="16">
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="pekerjaan">Pekerjaan</label>
+                    <input type="text" id="pekerjaan" name="pekerjaan" placeholder="Contoh: Mahasiswa" required>
+                </div>
+                <div class="form-group">
+                    <label for="hp">No. HP Penghuni</label>
+                    <input type="tel" id="hp" name="hp" placeholder="08xxxxxxxxxx" required>
+                </div>
+            </div>
 
-    <label>Nama Lengkap</label>
-    <input type="text">
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="namaDarurat">Nama Kontak Darurat</label>
+                    <input type="text" id="namaDarurat" name="namaDarurat" placeholder="Nama keluarga/kerabat" required>
+                </div>
+                <div class="form-group">
+                    <label for="hpDarurat">No. HP Kontak Darurat</label>
+                    <input type="tel" id="hpDarurat" name="hpDarurat" placeholder="08xxxxxxxxxx" required>
+                </div>
+            </div>
 
-    <label>Jenis Kelamin</label>
-    <input type="radio" name="jk" value="L"> Laki-laki
-    <input type="radio" name="jk" value="P"> Perempuan
+            <div class="form-row">
+                <div class="form-group full-width">
+                    <label for="alamat">Alamat Asal</label>
+                    <textarea id="alamat" name="alamat" rows="3" placeholder="Alamat lengkap sesuai KTP" required></textarea>
+                </div>
+            </div>
 
-    <label>Tanggal Lahir</label>
-    <input type="date">
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="kamar">Nomor Kamar</label>
+                    <input type="text" id="kamar" name="kamar" placeholder="Contoh: A-101" required>
+                </div>
+                <div class="form-group">
+                    <label for="tglSewa">Tanggal Mulai Sewa</label>
+                    <input type="date" id="tglSewa" name="tglSewa" required>
+                </div>
+            </div>
 
-    <label>Pekerjaan</label>
-    <input type="text">
+            <div class="form-actions">
+                <button type="submit" class="btn btn-primary">Simpan</button>
+                <a href="index.html" class="btn btn-secondary">Batal</a>
+            </div>
+        </form>
+    </div>
 
-    <label>No. HP Penghuni</label>
-    <input type="text">
-
-    <label>Nama Kontak Darurat</label>
-    <input type="text">
-
-    <label>No. HP Kontak Darurat</label>
-    <input type="number">
-
-    <label>Alamat Asal</label>
-    <textarea rows="3"></textarea>
-
-    <label>Nomor Kamar</label>
-    <input type="text" placeholder="Contoh: A-101">
-
-    <label>Tanggal Mulai Sewa</label>
-    <input type="date">
-
-    <br>
-    <button type="submit" class="btn">Simpan</button>
-    <a href="index.html" class="btn btn-secondary">Batal</a>
-  </form>
-</div>
-
+    <script>
+        document.getElementById('formPenghuni').addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('Data penghuni berhasil disimpan! (simulasi)');
+            this.reset();
+        });
+    </script>
 </body>
 </html>

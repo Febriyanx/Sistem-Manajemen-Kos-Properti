@@ -2,8 +2,9 @@
 <html lang="id">
 <head>
   <meta charset="UTF-8">
-  <title>Data Penghuni Kos</title>
-  <link rel="stylesheet" href="style.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Data Penghuni Kos - Case B</title>
+  <link rel="stylesheet" href="../style.css">
 </head>
 <body>
 
@@ -14,8 +15,10 @@
 <div class="container">
   <div class="top-bar">
     <h2>Daftar Penghuni</h2>
-    <a href="form-penghuni.html" class="btn">+ Tambah Penghuni</a>
-    <a href="index.html" class="btn"> Back</a>
+    <div class="btn-group">
+      <a href="form-penghuni.html" class="btn btn-primary">+ Tambah Penghuni</a>
+      <a href="index.html" class="btn btn-secondary">Back</a>
+    </div>
   </div>
 
   <table>
@@ -33,29 +36,29 @@
     </thead>
     <tbody>
       <tr>
-        <td>1</td>
-        <td>3273010101010001</td>
-        <td>Budi Santoso</td>
-        <td>L</td>
-        <td>Mahasiswa</td>
-        <td>0812-3456-7890</td>
-        <td>A-101</td>
-        <td>
-          <a href="#">Edit</a> |
-          <a href="#">Hapus</a>
+        <td data-label="No">1</td>
+        <td data-label="NIK">3273010101010001</td>
+        <td data-label="Nama">Budi Santoso</td>
+        <td data-label="JK"><span class="badge badge-l">L</span></td>
+        <td data-label="Pekerjaan">Mahasiswa</td>
+        <td data-label="No. HP">0812-3456-7890</td>
+        <td data-label="Kamar">A-101</td>
+        <td data-label="Aksi">
+          <a href="#" class="edit">Edit</a>
+          <a href="#" class="delete">Hapus</a>
         </td>
       </tr>
       <tr>
-        <td>2</td>
-        <td>3273020202020002</td>
-        <td>Siti Aminah</td>
-        <td>P</td>
-        <td>Karyawan</td>
-        <td>0813-1111-2222</td>
-        <td>B-205</td>
-        <td>
-          <a href="#">Edit</a> |
-          <a href="#">Hapus</a>
+        <td data-label="No">2</td>
+        <td data-label="NIK">3273020202020002</td>
+        <td data-label="Nama">Siti Aminah</td>
+        <td data-label="JK"><span class="badge badge-p">P</span></td>
+        <td data-label="Pekerjaan">Karyawan</td>
+        <td data-label="No. HP">0813-1111-2222</td>
+        <td data-label="Kamar">B-205</td>
+        <td data-label="Aksi">
+          <a href="#" class="edit">Edit</a>
+          <a href="#" class="delete">Hapus</a>
         </td>
       </tr>
     </tbody>
